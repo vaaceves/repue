@@ -1,2 +1,2 @@
-# repue
+# Repositorio Universidad Empresa - RepUE
 Repositorio Universidad Empresa, La RedUE ALCUE ha acumulado una cantidad grande de publicaciones, articulos y presentaciones creadas por diversos autores, investigadores y academicos de instituciones de educacion superior, instituciones gubernamentales y asociaciones civiles. Esta plataforma esta dedicada a difundir este conocimiento gratuitamente de forma organizada y eficaz. Logrando una facil consulta y el reconocimiento a los autores.

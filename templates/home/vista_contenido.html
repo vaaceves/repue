@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta name="description" content="">
+        <meta charset="utf-8">
+        <meta http-equiv=”Content-Language” content=”es”/>
+        <meta name=”distribution” content=”global”/>
+        <!--
+        logo made by Popcorns Arts - http://www.flaticon.com/authors/popcorns-arts from Flaticon - http://www.flaticon.com is licensed by Creative Commons BY 3.0 - http://creativecommons.org/licenses/by/3.0/
+        -->
+        <title>{{ this_content.titulo }} - Repositorio Universidad Empresa</title>
+        <link rel="icon" href="{% static "img/favicon.png" %}" type="image/x-icon">
+        <!--bootstrap css-->
+        <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+        <!--custom css-->
+        <link rel="stylesheet" href="{% static "css/custom.css" %}">
+        <!--
+        font awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+    <header>
+        <div class="row" id="header">
+                <div class="col-lg-6">
+                    <img class="img-responsive" id="replogo" src="{% static "img/logoname.png" %}">
+                </div>
+                <div class="col-lg-1">
+                </div>
+                <!--
+                redes sociales-->
+                <div class="col-lg-3 fixed-right">
+                    <div class="social">
+                        <a href="https://www.facebook.com/REDUNIVERSIDADEMPRESA" class="link facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/red_ue" class="link twitter" target="_blank"><span class="fa fa-twitter"></span></a>
+                        <a href="https://www.youtube.com/channel/UCVS24PEjoEPAEq5f63sY8bg" class="link youtube" target="_blank"><i class="fa fa-youtube"></i></a>
+                        <a href="http://observatoriodenoticias.redue-alcue.org/feed/" class="link rss" target="_blank"> <i class="fa fa-rss"></i></a>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <!--
+    nav-->
+    <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="logo-navbar" href="">
+                  <a href="/home/" target="_self"><span class="glyphicon glyphicon-home"></span>
+                  <span class="navbar-brand">Inicio</span></a>
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li class=""><a href="/home/about/">Acerca De<span class="sr-only">(current)</span></a></li>
+                <li><a href="/admin/">Iniciar sesion</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tematicas<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                      {% for tematica in tematica_list %}
+                            <li><a>{{ tematica.nombreTematica }}</a></li>
+                            <li class="divider"></li>
+                      {% endfor %}
+                  </ul>
+                </li>
+                  <li>
+                      <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                          <input class="form-control" style="width: 100%;" placeholder="Titulo, Autor, Congreso" type="text">
+                        </div>
+                        <button type="submit" class="btn btn-default">Buscar</button>
+                      </form>
+                  </li>
+              </ul>
+            </div>
+          </div>
+    </nav>
+    <!--
+    content
+    -->
+    <section>
+        <div class="container">
+            <!--form CREAR CONTENIDO-->
+            <form class="form-horizontal well" action="" enctype="multipart/form-data" method="post">
+                <fieldset>
+                    <div class="form-group">
+                    {% csrf_token %}
+                    <table class="table table-striped">
+                        {{ form.as_table }}
+                    </table>
+                        <button style="margin-right:5% " class="btn btn-lg btn-primary pull-right" type="submit" name="crear" value="crear">Publicar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <br><br><br><br><br><br>
+    </section>
+    <!--
+    footer-->
+    <footer>
+        <div class="row row-centered">
+            <br>
+            <center>
+                <a class="col-lg-3 h4 footerLink" data-toggle="modal" data-target="#contacto">Contacto</a>
+                <a class="col-lg-3 h4 footerLink">Eventos de la Red</a>
+                <a class="col-lg-3 h4 footerLink">Productos Academicos</a>
+                <a class="col-lg-3 h4 footerLink">FAQ</a>
+            </center>
+            <br>
+        </div>
+        <div class="row row-centered">
+            <center>
+                <hr width="90%">
+                <h3>&#169; 2017 - Red Universidad Empresa ALCUE</h3>
+                <br>
+            </center>
+        </div>
+    </footer>
+    <!--modal contacto-->
+    <div class="modal fade" role="dialog" id="contacto">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h5 class="modal-title">Celso Garrido Noguera - SECRETARÍA</h5>
+                    <p><strong>red.ue.alcue@gmail.com</strong></p>
+                    <p></p>
+                    <h5 class="modal-title">Verónica Vega - COORDINACIÓN OPERATIVA</h5>
+                    <p><strong>info.redue@gmail.com</strong></p>
+                    <p></p>
+                    <h5 class="modal-title">Alexis Aceves - WebMaster</h5>
+                    <p><strong>vaaceves@redue-alcue.org</strong> &nbsp;&nbsp;@vaaceves</p>
+                    <p></p>
+                </div>
+                <div class="modal-body">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+</html>

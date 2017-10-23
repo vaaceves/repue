@@ -1,6 +1,7 @@
 /*
 header - navbar
 */
+<<<<<<< HEAD
 .row-centered {
     text-align:center;
 }
@@ -15,11 +16,19 @@ header - navbar
 .row{
     width: 100%;
 }
+=======
+>>>>>>> origin/master
 #replogo{
     margin-left: 5px;
     padding:5px;
 }
+<<<<<<< HEAD
 
+=======
+#header{
+    background-image: url("{% static "img/nice_snow.png"%}");
+}
+>>>>>>> origin/master
 .logo-navbar img{
     height: 50px;
     padding: 6px;
@@ -42,6 +51,10 @@ footer{
     background-color: #2fa4e7;
     left:0px;
     bottom:0px;
+<<<<<<< HEAD
+=======
+    margin-bottom: -;
+>>>>>>> origin/master
     width:100%;
 }
 .footerLink{
@@ -122,3 +135,7 @@ social buttons header
 #downID{
     font-size: 3em;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master

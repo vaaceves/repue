@@ -49,7 +49,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+<<<<<<< HEAD
     'django.middleware.csrf.CsrfViewMiddleware',
+=======
+>>>>>>> origin/master
 ]
 
 ROOT_URLCONF = 'repue.urls'
@@ -57,7 +60,11 @@ ROOT_URLCONF = 'repue.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': [TEMPLATES_DIR, ],
+=======
+        'DIRS': [TEMPLATES_DIR],
+>>>>>>> origin/master
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,6 +89,7 @@ DATABASES = {
     }
 }
 
+<<<<<<< HEAD
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
@@ -91,6 +99,8 @@ HAYSTACK_CONNECTIONS = {
     },
 }
 
+=======
+>>>>>>> origin/master
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 
@@ -114,7 +124,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'es-mx'
 
+<<<<<<< HEAD
 TIME_ZONE = 'Mexico/General'
+=======
+TIME_ZONE = 'UTC'
+>>>>>>> origin/master
 
 USE_I18N = True
 
@@ -122,17 +136,27 @@ USE_L10N = True
 
 USE_TZ = True
 
+<<<<<<< HEAD
 DEFAULT_CHARSET = 'utf-8'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 STATICFILES_DIRS = [STATIC_DIR, os.path.join(BASE_DIR, 'media'), ]
+=======
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.10/howto/static-files/
+STATICFILES_DIRS = [STATIC_DIR, os.path.join(BASE_DIR, 'media'),]
+>>>>>>> origin/master
 
 STATIC_URL = '/static/'
 
 # media variables
 MEDIA_ROOT = MEDIA_DIR
+<<<<<<< HEAD
 MEDIA_URL = '/media/'
 
 # adminsite
 ADMIN_SITE_HEADER = "Repositorio Universidad-Empresa"
+=======
+MEDIA_URL = '/media/'
+>>>>>>> origin/master

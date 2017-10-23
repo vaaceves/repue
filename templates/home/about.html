@@ -2,6 +2,7 @@
 {% load staticfiles %}
 <html lang="es-mx">
     <head>
+<<<<<<< HEAD
         <meta charset="utf-8">
         <meta http-equiv=”Content-Language” content=”es”/>
         <meta name=”distribution” content=”global”/>
@@ -9,10 +10,19 @@
         <meta name=viewport content="width=device-width, initial-scale=1">
         <meta name="keywords" content="acerca de, repositorio, consulta, investigacion, universidad, empresa,
         relacion,redue, alcue, congreso internacional, call for papper, america latina, iberoamerica, articulo, presentacion"/>
+=======
+        <meta name="description" content="La Red Universidad-Empresa ALCUE ha acumulado a traves de sus eventos una cantidad grande de publicaciones, articulos y presentaciones creadas por diversos investigadores y academicos de instituciones de educacion superior, instituciones gubernamentales y asociaciones civiles.
+                                            Esta plataforma esta dedicada a difundir este conocimiento de forma organizada y gratuita.
+                                            Logrando una facil consulta, dandole credito a los autores e instituciones correspondientes.">
+        <meta charset="utf-8">
+        <meta http-equiv=”Content-Language” content=”es”/>
+        <meta name=”distribution” content=”global”/>
+>>>>>>> origin/master
         <!--
         logo made by Popcorns Arts - http://www.flaticon.com/authors/popcorns-arts from Flaticon - http://www.flaticon.com is licensed by Creative Commons BY 3.0 - http://creativecommons.org/licenses/by/3.0/
         -->
         <title>Acerca De - Repositorio Universidad-Empresa</title>
+<<<<<<< HEAD
         <meta name="description" content="Repositorio de Articulos y Presentaciones de Investigacion.
         Esta plataforma esta dedicada a difundir conocimiento Universidad Empresa en America Latina y El Caribe - Union Europea
         de forma organizada y gratuita. Logrando una facil consulta, dandole credito a los autores e instituciones correspondientes">
@@ -28,6 +38,8 @@
         <!--  Non-Essential, But Recommended -->
         <meta property="og:site_name" content="Acerca De - Repositorio Universidad-Empresa">
         <meta name="twitter:image:alt" content="Repositorio Universidad-Empresa">
+=======
+>>>>>>> origin/master
         <link rel="icon" href="{% static "img/favicon.png" %}" type="image/x-icon">
         <!--bootstrap css-->
         <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
@@ -53,7 +65,11 @@
                 </div>
                 <!--
                 redes sociales-->
+<<<<<<< HEAD
                 <div class="col-lg-3 fixed-right hidden-md">
+=======
+                <div class="col-lg-3 fixed-right">
+>>>>>>> origin/master
                     <div class="social">
                         <a href="https://www.facebook.com/REDUNIVERSIDADEMPRESA" class="link facebook" target="_blank"><i class="fa fa-facebook"></i></a>
                         <a href="https://twitter.com/red_ue" class="link twitter" target="_blank"><span class="fa fa-twitter"></span></a>
@@ -85,6 +101,7 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tematicas<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
                       {% for tematica in tematica_list %}
+<<<<<<< HEAD
                             <li><a href="/home/tematica/{{ tematica.slug }}">{{ tematica.nombreTematica }}</a></li>
                             <li class="divider"></li>
                       {% endfor %}
@@ -95,17 +112,28 @@
                   <ul class="dropdown-menu" role="menu">
                       {% for pais in pais_list %}
                             <li><a href="/home/pais/{{ pais.slug }}">{{ pais.pais }}</a></li>
+=======
+                            <li><a>{{ tematica.nombreTematica }}</a></li>
+>>>>>>> origin/master
                             <li class="divider"></li>
                       {% endfor %}
                   </ul>
                 </li>
                   <li>
+<<<<<<< HEAD
                       <form class="navbar-form navbar-right" id="form" role="form" action="{% url 'search_submit' %}" method="post">
                         <div class="form-group">
                             {% csrf_token %}
                             <input class="form-control" style="width: 100%;" name="search" id="search" type="search" placeholder="Titulo, Autor, Congreso">
                         </div>
                         <button class="btn btn-warning" type="submit">Buscar</button>
+=======
+                      <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                          <input class="form-control" style="width: 100%;" placeholder="Titulo, Autor, Congreso" type="text">
+                        </div>
+                        <button type="submit" class="btn btn-default">Buscar</button>
+>>>>>>> origin/master
                       </form>
                   </li>
               </ul>
@@ -140,8 +168,13 @@
             <br>
             <center>
                 <a class="col-lg-3 h4 footerLink" data-toggle="modal" data-target="#contacto">Contacto</a>
+<<<<<<< HEAD
                 <a class="col-lg-3 h4 footerLink" href="https://www.redue-alcue.org/website/eventos.php" target="_blank">Eventos de la Red</a>
                 <a class="col-lg-3 h4 footerLink" href="https://www.redue-alcue.org/website/productosacademicos.php" target="_blank">Productos Academicos</a>
+=======
+                <a class="col-lg-3 h4 footerLink">Eventos de la Red</a>
+                <a class="col-lg-3 h4 footerLink">Productos Academicos</a>
+>>>>>>> origin/master
                 <a class="col-lg-3 h4 footerLink">FAQ</a>
             </center>
             <br>

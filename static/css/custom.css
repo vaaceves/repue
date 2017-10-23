@@ -1,0 +1,124 @@
+/*
+header - navbar
+*/
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+.row{
+    width: 100%;
+}
+#replogo{
+    margin-left: 5px;
+    padding:5px;
+}
+
+.logo-navbar img{
+    height: 50px;
+    padding: 6px;
+    text-decoration-line: none;
+}
+.navbar-brand{
+    line-height: 2.5;
+
+}
+.glyphicon-home{
+    margin-left: 10px;
+    padding: 0px;
+    color: white;
+    font-size: 18px;
+}
+/*
+footer
+*/
+footer{
+    background-color: #2fa4e7;
+    left:0px;
+    bottom:0px;
+    width:100%;
+}
+.footerLink{
+    color: white;
+    text-decoration: none;
+}
+.footerLink:hover
+{
+     color: white;
+     text-decoration:none;
+     cursor:pointer;
+}
+/*
+social buttons header
+*/
+.social {
+    padding-top: 30%;
+    margin-bottom: -60px;
+  width: 100%;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+}
+.social .link {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px dashed white;
+  background-clip: content-box;
+  padding: 5px;
+  transition: .5s;
+  color: #D7D0BE;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-shadow:
+    0 -1px 0 rgba(0, 0, 0, 0.2),
+    0 1px 0 rgba(255, 255, 255, 0.2);
+  font-size: 20px;
+}
+.social .link span {
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 50%;
+  transform: translate(-40%, -40%);
+}
+
+.social .link:hover {
+  padding: 10px;
+  color: #1995dc;
+  margin-left: -5px;
+  transform: translateX(5px) rotate(360deg);
+}
+
+.social .link.youtube {
+  background-color: red;
+  color: white;
+}
+
+.social .link.twitter {
+  background-color: #00ACEE;
+  color: white;
+}
+
+.social .link.facebook {
+  background-color: #3B5998;
+  color: white;
+}
+
+.social .link.rss {
+  background-color: orangered;
+  color: white;
+}
+#downID{
+    font-size: 3em;
+}

@@ -1,4 +1,0 @@
-Django==1.11.2
-Pillow==4.1.1
-django-simple-pagination==1.1.8
-psycopg2==2.6

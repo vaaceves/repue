@@ -139,10 +139,13 @@ USE_TZ = True
 DEFAULT_CHARSET = 'utf-8'
 
 # Static files (CSS, JavaScript, Images)
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
 
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-STATICFILES_DIRS = [STATIC_DIR, os.path.join(BASE_DIR, 'media'), ]
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'media'),
+)
 
 STATIC_URL = '/static/'
 

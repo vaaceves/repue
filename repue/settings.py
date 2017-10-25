@@ -14,6 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
@@ -82,6 +83,11 @@ DATABASES = {
     }
 }
 
+# Update database configuration with $DATABASE_URL.
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
@@ -125,6 +131,8 @@ USE_TZ = True
 DEFAULT_CHARSET = 'utf-8'
 
 # Static files (CSS, JavaScript, Images)
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 STATICFILES_DIRS = [STATIC_DIR, os.path.join(BASE_DIR, 'media'), ]
 
@@ -136,3 +144,8 @@ MEDIA_URL = '/media/'
 
 # adminsite
 ADMIN_SITE_HEADER = "Repositorio Universidad-Empresa"
+
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
